@@ -1,0 +1,64 @@
+#include <vector>
+#include "csce310hw04pt01.h"
+#include <iostream>
+
+using namespace std;
+
+int findCurrentMaxVal(vector<int> &numbers, vector<int> &F, int n,int i, int maxVal, int skip,int largestMax){
+	int firstVal;
+	int indexOfFirstVal;
+
+	if(i + skip+1>n){
+		if(largestMax>maxVal){
+			return largestMax;
+		}
+		return maxVal;
+	}
+	firstVal = F[i+skip+1];
+	for(int j=i+skip+1; F[j]== firstVal; j++){
+		indexOfFirstVal =j;				//first occurrence of number
+	}
+	i = indexOfFirstVal;
+	maxVal += numbers[indexOfFirstVal];	//increase maxVal
+	skip = numbers[indexOfFirstVal];
+	return findCurrentMaxVal(numbers,F,n,i,maxVal,skip,largestMax);
+
+	return -1;
+}
+
+int coinRowWithJumps( vector<int> numbers ){
+	int n = numbers.size();
+	vector<int>F;
+	int skip;
+	int finalVal;
+	int largestMax= 0;
+
+	for(int i =0; i<n; i++){ 			//initialize vector
+		F.push_back(0);
+	}
+
+	for(int i = n-1; i>=0; i--){
+		int maxVal =0;
+		skip = numbers[i];
+
+		if(i+skip+1 >=n){
+				maxVal+=numbers[i];		//Instance where we take 1 coin
+				if(maxVal>largestMax){
+					largestMax = maxVal;
+					F[i] = largestMax;
+				}else{
+					F[i] = largestMax;
+				}
+
+		}
+		else{							//take more than 1 coin
+			maxVal += numbers[i];
+			maxVal=findCurrentMaxVal(numbers,F,n,i,maxVal,skip,largestMax);
+			F[i] = maxVal;
+			if(maxVal>largestMax) largestMax=maxVal;
+		}
+
+	}
+	finalVal= F[0];
+	return finalVal;
+}
