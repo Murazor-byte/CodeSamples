@@ -1,6 +1,6 @@
 # CodeSamples
 
-A handfull of code samples from personal or school projects.
+A handfull of code samples from personal and course projects.
 
 Author: David Jackson
 Email: jdaacvkisdo.n@gmail.com
