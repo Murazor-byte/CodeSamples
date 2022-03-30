@@ -8,7 +8,7 @@ using UnityEngine;
 */
 public class ProbabilityGenerator
 {
-    private float[] probForEntities;    //probability for each entity
+    private float[] probForEntities;
 
     public ProbabilityGenerator(float[] probForEntities)
     {
