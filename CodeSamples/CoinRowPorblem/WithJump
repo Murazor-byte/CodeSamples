@@ -33,7 +33,7 @@ int coinRowWithJumps( vector<int> numbers ){
 	int finalVal;
 	int largestMax= 0;
 
-	for(int i =0; i<n; i++){ 			//initialize vector
+	for(int i =0; i<n; i++){ 
 		F.push_back(0);
 	}
 
