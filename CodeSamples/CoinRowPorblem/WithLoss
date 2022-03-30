@@ -7,7 +7,6 @@ using namespace std;
 
 int collectWithLoss( vector< vector<int> > grid ){
 
-	//#Rows and Columns in matrix
 	int rows = grid.size();
 	int columns= grid[0].size();
 
