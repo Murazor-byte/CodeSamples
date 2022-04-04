@@ -1,4 +1,4 @@
-# CodeSamples
+# Code Samples
 
 This repository consists of a few code samples from personal and course projects.
 
