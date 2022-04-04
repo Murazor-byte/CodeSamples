@@ -1,6 +1,6 @@
 # CodeSamples
 
-A handfull of code samples from personal and course projects.
+This repository consists of a few code samples from personal and course projects.
 
 Author: David Jackson
 
