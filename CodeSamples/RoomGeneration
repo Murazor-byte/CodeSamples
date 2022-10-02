@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * RoomGenerator script randomly generates a combat ready room
+ * RoomGenerator script randomly generates a unit room through the Unity Game Engine
  * Creates a nxm main layout, where smaller nxm blocks are instantiated on its perimeter (crevasses)
  * Lastly iterates over all perimeter tiles selecting from a random borderTile index
  * generation can be altered through the: 'iterations','rows','columns', and 'probSpawningCrevasse' variables
